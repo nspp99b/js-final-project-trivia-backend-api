@@ -12,4 +12,6 @@ class Game < ApplicationRecord
   def get_all_questions
 
   end
+
+
 end
