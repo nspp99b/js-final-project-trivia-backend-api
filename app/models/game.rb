@@ -1,4 +1,4 @@
 class Game < ApplicationRecord
   has_many :responses
-  has_many :games, through: :responses
+  has_many :questions, through: :responses
 end
