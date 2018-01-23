@@ -12,6 +12,12 @@ class Api::V1::GamesController < ApplicationController
     render json: @game
   end
 
+  def update
+    @game = Game.find(params[:id])
+    @game.score = 5000
+    render json: @game
+  end
+
 
   private
 
