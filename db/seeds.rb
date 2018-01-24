@@ -37,11 +37,11 @@ Question.create(
   answer: nil)
 
 Question.create(
-  content: '<div class="question-2 text-center"> <div class="question"> <h2>Question: Find the primary number</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-incorrect">25818578</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">159</button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-correct">2</button> <button type="button" name="answer-four" class="btn-primary is-incorrect">16</button> </div></div></div>',
+  content: '<div class="question-2 text-center"> <div class="question"> <h2>Question: Find the prime number</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-incorrect">25818578</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">159</button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-correct">2</button> <button type="button" name="answer-four" class="btn-primary is-incorrect">16</button> </div></div></div>',
   answer: nil)
 
 Question.create(
-  content: '<div class="question-3 text-center"> <div class="question"> <h2>Question: What is the capitol of Kansas</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-incorrect">Boise</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">Kansas City</button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-incorrect">Lawrence</button> <button type="button" name="answer-four" class="btn-primary is-correct">Topeka</button> </div></div></div>',
+  content: '<div class="question-3 text-center"> <div class="question"> <h2>Question: What is the capital of Kansas</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-incorrect">Boise</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">Kansas City</button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-incorrect">Lawrence</button> <button type="button" name="answer-four" class="btn-primary is-correct">Topeka</button> </div></div></div>',
   answer: nil)
 
 Question.create(
@@ -52,10 +52,10 @@ Question.create(
   content: '<div class="text-center"><div class="question"><h2>Question: Would You Rather</h2></div><div class="container"><div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-correct">be alive in the past</button> <button type="button" name="answer-two" class="btn-primary">be alive in the future</button></div></div></div>',
   answer: nil
 )
-#
-# Question.create(
-#   content: '',
-#   answer: nil)
+
+Question.create(
+  content: '<div id="container"> <div> <img src="https://static.seattletimes.com/wp-content/uploads/2009/01/2008664999-300x0.jpg" alt="taco bell dog" height="80"> <div> <span><h2>Spell this breed of dog</h2></span> </div>Type carefully! </div><div id="keyboard"> <div class="row"> <div class="letter">q</div><div class="letter">w</div><div class="letter">e</div><div class="letter">r</div><div class="letter">t</div><div class="letter">y</div><div class="letter">u</div><div class="letter">i</div><div class="letter">o</div><div class="letter">p</div></div><div class="row"> <div class="letter">a</div><div class="letter">s</div><div class="letter">d</div><div class="letter">f</div><div class="letter">g</div><div class="letter">h</div><div class="letter">j</div><div class="letter">k</div><div class="letter">l</div></div><div class="row"> <div class="letter">z</div><div class="letter">x</div><div class="letter">c</div><div class="letter">v</div><div class="letter">b</div><div class="letter">n</div><div class="letter">m</div></div></div><script>App.startKeyboard()</script>',
+  answer: nil)
 # Question.create(
 #   content: '',
 #   answer: nil)
