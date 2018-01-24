@@ -193,12 +193,12 @@ Completed 204 No Content in 4512799ms (ActiveRecord: 16.8ms)
 
 
 Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-22 13:18:31 -0500
-  
+
 PG::ConnectionBad (could not connect to server: No such file or directory
 	Is the server running locally and accepting
 	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
 ):
-  
+
 pg (0.21.0) lib/pg.rb:56:in `initialize'
 pg (0.21.0) lib/pg.rb:56:in `new'
 pg (0.21.0) lib/pg.rb:56:in `connect'
@@ -250,9 +250,9 @@ Processing by Api::V1::GamesController#create as JSON
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 5.6ms)
 
 
-  
+
 NoMethodError (undefined method `name=' for #<Game not initialized>):
-  
+
 app/models/game.rb:6:in `initialize'
 app/controllers/api/v1/games_controller.rb:11:in `create'
 Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-22 13:19:20 -0500
@@ -262,9 +262,9 @@ Processing by Api::V1::GamesController#create as JSON
 Completed 500 Internal Server Error in 4ms (ActiveRecord: 2.4ms)
 
 
-  
+
 NoMethodError (undefined method `name=' for #<Game not initialized>):
-  
+
 app/models/game.rb:6:in `initialize'
 app/controllers/api/v1/games_controller.rb:11:in `create'
 Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-22 13:21:01 -0500
@@ -277,9 +277,9 @@ Processing by Api::V1::GamesController#create as JSON
 Completed 500 Internal Server Error in 77885ms (ActiveRecord: 25.4ms)
 
 
-  
+
 SystemExit (exit):
-  
+
 (byebug):1:in `exit'
 (byebug):1:in `create'
 app/controllers/api/v1/games_controller.rb:13:in `create'
@@ -293,9 +293,9 @@ Processing by Api::V1::GamesController#create as JSON
 Completed 500 Internal Server Error in 357988ms (ActiveRecord: 7.9ms)
 
 
-  
+
 SystemExit (exit):
-  
+
 (byebug):1:in `exit'
 (byebug):1:in `create'
 app/controllers/api/v1/games_controller.rb:13:in `create'
@@ -446,9 +446,9 @@ Completed 200 OK in 7ms (Views: 0.8ms | ActiveRecord: 2.0ms)
   [1m[36mGame Load (1.8ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT $1[0m  [["LIMIT", 11]]
 Started GET "/api/v1/games" for 127.0.0.1 at 2018-01-22 14:33:20 -0500
   [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-  
+
 AbstractController::ActionNotFound (The action 'index' could not be found for Api::V1::GamesController):
-  
+
 actionpack (5.1.4) lib/abstract_controller/base.rb:119:in `process'
 actionpack (5.1.4) lib/action_controller/metal.rb:189:in `dispatch'
 actionpack (5.1.4) lib/action_controller/metal.rb:253:in `dispatch'
@@ -1874,9 +1874,9 @@ Completed 200 OK in 7ms (Views: 0.7ms | ActiveRecord: 3.6ms)
 
 
 Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 13:07:15 -0500
-  
+
 ActionController::RoutingError (No route matches [POST] "/api/v1/responses"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -2079,10 +2079,10 @@ Processing by Api::V1::ResponsesController#create as JSON
 Completed 500 Internal Server Error in 6ms (ActiveRecord: 2.4ms)
 
 
-  
+
 ActiveRecord::PreparedStatementCacheExpired (ERROR:  cached plan must not change result type
 ):
-  
+
 app/controllers/api/v1/responses_controller.rb:4:in `create'
 Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 13:45:44 -0500
 Processing by Api::V1::ResponsesController#create as JSON
@@ -2094,10 +2094,10 @@ Processing by Api::V1::ResponsesController#create as JSON
 Completed 500 Internal Server Error in 5ms (ActiveRecord: 1.3ms)
 
 
-  
+
 ActiveRecord::PreparedStatementCacheExpired (ERROR:  cached plan must not change result type
 ):
-  
+
 app/controllers/api/v1/responses_controller.rb:4:in `create'
 Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 13:45:46 -0500
 Processing by Api::V1::ResponsesController#create as JSON
@@ -2762,9 +2762,9 @@ Completed 204 No Content in 7ms (ActiveRecord: 1.9ms)
 
 
 Started PATCH "/api/v1/game/%20+%2073" for 127.0.0.1 at 2018-01-23 15:10:54 -0500
-  
+
 ActionController::RoutingError (No route matches [PATCH] "/api/v1/game/%20+%2073"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -2928,9 +2928,9 @@ Completed 204 No Content in 6ms (ActiveRecord: 1.7ms)
 
 
 Started PATCH "/api/v1/game/%20+%2074" for 127.0.0.1 at 2018-01-23 15:17:09 -0500
-  
+
 ActionController::RoutingError (No route matches [PATCH] "/api/v1/game/%20+%2074"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3094,9 +3094,9 @@ Completed 204 No Content in 6ms (ActiveRecord: 1.7ms)
 
 
 Started PATCH "/api/v1/game/%20+%20%2275%22" for 127.0.0.1 at 2018-01-23 15:19:54 -0500
-  
+
 ActionController::RoutingError (No route matches [PATCH] "/api/v1/game/%20+%20%2275%22"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3260,9 +3260,9 @@ Completed 204 No Content in 6ms (ActiveRecord: 1.7ms)
 
 
 Started PATCH "/api/v1/game/76" for 127.0.0.1 at 2018-01-23 15:20:19 -0500
-  
+
 ActionController::RoutingError (No route matches [PATCH] "/api/v1/game/76"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3426,9 +3426,9 @@ Completed 204 No Content in 6ms (ActiveRecord: 1.7ms)
 
 
 Started PATCH "/api/v1/game/77" for 127.0.0.1 at 2018-01-23 15:23:12 -0500
-  
+
 ActionController::RoutingError (No route matches [PATCH] "/api/v1/game/77"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3592,9 +3592,9 @@ Completed 204 No Content in 6ms (ActiveRecord: 1.7ms)
 
 
 Started PATCH "/api/v1/game/78" for 127.0.0.1 at 2018-01-23 15:25:12 -0500
-  
+
 ActionController::RoutingError (No route matches [PATCH] "/api/v1/game/78"):
-  
+
 actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
 actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
 railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
@@ -3764,9 +3764,9 @@ Processing by Api::V1::GamesController#update as JSON
 Completed 500 Internal Server Error in 47819ms (ActiveRecord: 0.4ms)
 
 
-  
+
 SystemExit (exit):
-  
+
 (byebug):1:in `exit'
 (byebug):1:in `update'
 app/controllers/api/v1/games_controller.rb:17:in `update'
@@ -7378,5 +7378,3 @@ Completed 200 OK in 43ms (Views: 33.5ms | ActiveRecord: 15.1ms)
   [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
 [active_model_serializers] Rendered ActiveModel::Serializer::Null with Game (0.69ms)
 Completed 200 OK in 43ms (Views: 4.1ms | ActiveRecord: 31.8ms)
-
-
