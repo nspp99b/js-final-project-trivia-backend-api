@@ -2479,3 +2479,499 @@ Processing by Api::V1::ResponsesController#create as JSON
 Completed 204 No Content in 6ms (ActiveRecord: 1.7ms)
 
 
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2682848128924506375)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddCategoryToQuestions (20180123183319)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.4ms)[0m  [1m[35mALTER TABLE "questions" ADD "category" character varying[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180123183319"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2682848128924506375)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "games" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Humzah"], ["created_at", "2018-01-23 20:34:16.335958"], ["updated_at", "2018-01-23 20:34:16.335958"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[31mDELETE FROM "games" WHERE "games"."id" = $1[0m  [["id", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mResponse Load (0.9ms)[0m  [1m[34mSELECT  "responses".* FROM "responses" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-2text-center\"><divclass=\"question\"><h2>Question:</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">PlaceHolder</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primary\">Placeholder2</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primary\">Placeholder3</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primary\">Placeholder4</button></div></div></div>"], ["created_at", "2018-01-23 20:55:31.730378"], ["updated_at", "2018-01-23 20:55:31.730378"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"questiontext-center\"><h2>Grandmaislost,findher</h2></div><div><divclass=\"square-largeanswerposition1is-incorrect\"><divclass=\"text-centertext\">notthisone</div></div><divclass=\"square-grammyposition2hiddenis-correct\"><imgsrc=\"http://www.deliciousmusings.com/wp-content/uploads/2012/02/180847741256075452_q1JydjkV_f1.jpg\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"square-guyhiddenposition3is-incorrect\"><imgsrc=\"https://img.youtube.com/vi/gn1-lBpD_6c/0.jpg\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"circlehiddenposition4is-incorrect\"><imgsrc=\"https://media-elerium.cursecdn.com/avatars/83/256/636187384434867364.png\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"circle-largeanswerposition5\"><divclass=\"text-centertext\">keeplooking!</div></div><divclass=\"square-largehiddenposition6is-incorrect\"><imgsrc=\"https://pbs.twimg.com/profile_images/679965501271990272/jl6_A6ZX.jpg\"alt=\"Smileyface\"height=\"200\"width=\"\"></div></div>"], ["created_at", "2018-01-23 20:55:31.733456"], ["updated_at", "2018-01-23 20:55:31.733456"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divid=\"maze\"><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary1\">DONTTOUCHTHERED!</div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary2\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary3\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary4\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary5\"></div><divid=\"start\"class=\"start-maze-hover\">S</div><divid=\"end\"class=\"end-maze-hover\">E</div></div>"], ["created_at", "2018-01-23 20:55:31.735889"], ["updated_at", "2018-01-23 20:55:31.735889"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-2text-center\"><divclass=\"question\"><h2>Question:Findtheprimarynumber</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">25818578</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">159</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-correct\">2</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-incorrect\">16</button></div></div></div>"], ["created_at", "2018-01-23 20:55:31.737920"], ["updated_at", "2018-01-23 20:55:31.737920"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-3text-center\"><divclass=\"question\"><h2>Question:WhatisthecapitolofKansas</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">Boise</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">KansasCity</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-incorrect\">Lawrence</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-correct\">Topeka</button></div></div></div>"], ["created_at", "2018-01-23 20:55:31.739905"], ["updated_at", "2018-01-23 20:55:31.739905"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-3text-center\"><divclass=\"question\"><h2>Question:WhatwasthelaststatetojointheUnion</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-correct\">Hawaii</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">Alaska</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-incorrect\">PuertoRico</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-incorrect\">Candyland</button></div></div></div>"], ["created_at", "2018-01-23 20:55:31.741947"], ["updated_at", "2018-01-23 20:55:31.741947"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-23 15:58:27 -0500
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 15:58:27 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2018-01-23 16:25:03 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/humzahchoudry/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/humzahchoudry/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.1ms)
+Completed 200 OK in 18ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-01-23 16:25:30 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/humzahchoudry/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/humzahchoudry/.rvm/gems/ruby-2.3.3/gems/railties-5.1.4/lib/rails/templates/rails/welcome/index.html.erb (4.0ms)
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/questions" for 127.0.0.1 at 2018-01-23 16:25:34 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/questions"):
+  
+actionpack (5.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.4) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.4) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.4) lib/rails/rack/logger.rb:24:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.4) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.3) lib/rack/sendfile.rb:111:in `call'
+rack-cors (1.0.2) lib/rack/cors.rb:97:in `call'
+railties (5.1.4) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 16:25:48 -0500
+Processing by Api::V1::QuestionsController#index as HTML
+  [1m[36mQuestion Load (2.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+No serializer found for resource: #<Question id: 11, content: "<divclass=\"question-2text-center\"><divclass=\"quest...", answer: nil, created_at: "2018-01-23 20:55:31", updated_at: "2018-01-23 20:55:31", category: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Question::ActiveRecord_Relation (2.14ms)
+Completed 200 OK in 50ms (Views: 26.5ms | ActiveRecord: 10.9ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-23 16:28:29 -0500
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 16:28:29 -0500
+Processing by Api::V1::QuestionsController#index as JSON
+  Parameters: {"question"=>{}}
+  [1m[36mQuestion Load (8.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+No serializer found for resource: #<Question id: 11, content: "<divclass=\"question-2text-center\"><divclass=\"quest...", answer: nil, created_at: "2018-01-23 20:55:31", updated_at: "2018-01-23 20:55:31", category: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Question::ActiveRecord_Relation (1.82ms)
+Completed 200 OK in 13ms (Views: 3.9ms | ActiveRecord: 8.7ms)
+
+
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"name"=>"hello", "game"=>{"name"=>"hello"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "games" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "hello"], ["created_at", "2018-01-23 21:28:29.348561"], ["updated_at", "2018-01-23 21:28:29.348561"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Game (0.33ms)
+Completed 200 OK in 23ms (Views: 5.3ms | ActiveRecord: 19.7ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 16:28:40 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>2, "question_id"=>11, "is_correct"=>true, "response"=>{"game_id"=>2, "question_id"=>11, "is_correct"=>true}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 2], ["question_id", 11], ["is_correct", "t"], ["created_at", "2018-01-23 21:28:41.018718"], ["updated_at", "2018-01-23 21:28:41.018718"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 33ms (ActiveRecord: 9.1ms)
+
+
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (5045.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trivial_development"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (152.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trivial_development"[0m
+  [1m[35m (146.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trivial_test"[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2682848128924506375)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20180119214601)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "name" character varying, "score" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119214601"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateQuestions (20180119215238)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.0ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "content" text, "answer" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119215238"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateResponses (20180119215412)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "responses" ("id" bigserial primary key, "game_id" integer, "question_id" integer, "is_correct" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119215412"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryToQuestions (20180123183319)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "questions" ADD "category" character varying[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180123183319"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-23 21:32:05.305947"], ["updated_at", "2018-01-23 21:32:05.305947"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(2682848128924506375)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-2text-center\"><divclass=\"question\"><h2>Question:</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">PlaceHolder</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primary\">Placeholder2</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primary\">Placeholder3</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primary\">Placeholder4</button></div></div></div>"], ["created_at", "2018-01-23 21:32:34.829576"], ["updated_at", "2018-01-23 21:32:34.829576"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"questiontext-center\"><h2>Grandmaislost,findher</h2></div><div><divclass=\"square-largeanswerposition1is-incorrect\"><divclass=\"text-centertext\">notthisone</div></div><divclass=\"square-grammyposition2hiddenis-correct\"><imgsrc=\"http://www.deliciousmusings.com/wp-content/uploads/2012/02/180847741256075452_q1JydjkV_f1.jpg\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"square-guyhiddenposition3is-incorrect\"><imgsrc=\"https://img.youtube.com/vi/gn1-lBpD_6c/0.jpg\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"circlehiddenposition4is-incorrect\"><imgsrc=\"https://media-elerium.cursecdn.com/avatars/83/256/636187384434867364.png\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"circle-largeanswerposition5\"><divclass=\"text-centertext\">keeplooking!</div></div><divclass=\"square-largehiddenposition6is-incorrect\"><imgsrc=\"https://pbs.twimg.com/profile_images/679965501271990272/jl6_A6ZX.jpg\"alt=\"Smileyface\"height=\"200\"width=\"\"></div></div>"], ["created_at", "2018-01-23 21:32:34.832905"], ["updated_at", "2018-01-23 21:32:34.832905"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divid=\"maze\"><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary1\">DONTTOUCHTHERED!</div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary2\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary3\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary4\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary5\"></div><divid=\"start\"class=\"start-maze-hover\">S</div><divid=\"end\"class=\"end-maze-hover\">E</div></div>"], ["created_at", "2018-01-23 21:32:34.835037"], ["updated_at", "2018-01-23 21:32:34.835037"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-2text-center\"><divclass=\"question\"><h2>Question:Findtheprimarynumber</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">25818578</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">159</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-correct\">2</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-incorrect\">16</button></div></div></div>"], ["created_at", "2018-01-23 21:32:34.837140"], ["updated_at", "2018-01-23 21:32:34.837140"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-3text-center\"><divclass=\"question\"><h2>Question:WhatisthecapitolofKansas</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">Boise</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">KansasCity</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-incorrect\">Lawrence</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-correct\">Topeka</button></div></div></div>"], ["created_at", "2018-01-23 21:32:34.839708"], ["updated_at", "2018-01-23 21:32:34.839708"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-3text-center\"><divclass=\"question\"><h2>Question:WhatwasthelaststatetojointheUnion</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-correct\">Hawaii</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">Alaska</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-incorrect\">PuertoRico</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-incorrect\">Candyland</button></div></div></div>"], ["created_at", "2018-01-23 21:32:34.842067"], ["updated_at", "2018-01-23 21:32:34.842067"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-23 16:41:36 -0500
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 16:41:36 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 16:55:25 -0500
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+No serializer found for resource: #<Question id: 1, content: "<divclass=\"question-2text-center\"><divclass=\"quest...", answer: nil, created_at: "2018-01-23 21:32:34", updated_at: "2018-01-23 21:32:34", category: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Question::ActiveRecord_Relation (4.42ms)
+Completed 200 OK in 47ms (Views: 30.8ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-23 16:55:36 -0500
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 16:55:36 -0500
+Processing by Api::V1::GamesController#create as JSON
+Processing by Api::V1::QuestionsController#index as JSON
+  Parameters: {"name"=>"hello", "game"=>{"name"=>"hello"}}
+  Parameters: {"question"=>{}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.9ms)[0m  [1m[32mINSERT INTO "games" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "hello"], ["created_at", "2018-01-23 21:55:36.228648"], ["updated_at", "2018-01-23 21:55:36.228648"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Game (0.53ms)
+Completed 200 OK in 22ms (Views: 4.3ms | ActiveRecord: 22.6ms)
+
+
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+No serializer found for resource: #<Question id: 1, content: "<divclass=\"question-2text-center\"><divclass=\"quest...", answer: nil, created_at: "2018-01-23 21:32:34", updated_at: "2018-01-23 21:32:34", category: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Question::ActiveRecord_Relation (2.39ms)
+Completed 200 OK in 33ms (Views: 18.1ms | ActiveRecord: 15.1ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 16:55:44 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>1, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>1, "is_correct"=>true}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.8ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 1], ["is_correct", "t"], ["created_at", "2018-01-23 21:55:44.343593"], ["updated_at", "2018-01-23 21:55:44.343593"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 41ms (ActiveRecord: 9.8ms)
+
+
+Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-23 16:57:15 -0500
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 16:57:15 -0500
+Processing by Api::V1::GamesController#create as JSON
+Processing by Api::V1::QuestionsController#index as JSON
+  Parameters: {"name"=>"hello", "game"=>{"name"=>"hello"}}
+  Parameters: {"question"=>{}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+No serializer found for resource: #<Question id: 1, content: "<divclass=\"question-2text-center\"><divclass=\"quest...", answer: nil, created_at: "2018-01-23 21:32:34", updated_at: "2018-01-23 21:32:34", category: nil>
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "games" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "hello"], ["created_at", "2018-01-23 21:57:15.669994"], ["updated_at", "2018-01-23 21:57:15.669994"]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Question::ActiveRecord_Relation (1.89ms)
+Completed 200 OK in 7ms (Views: 5.4ms | ActiveRecord: 1.7ms)
+
+
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Game (0.36ms)
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 3.2ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 16:57:25 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>2, "question_id"=>1, "is_correct"=>true, "response"=>{"game_id"=>2, "question_id"=>1, "is_correct"=>true}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 2], ["question_id", 1], ["is_correct", "t"], ["created_at", "2018-01-23 21:57:25.911754"], ["updated_at", "2018-01-23 21:57:25.911754"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 9ms (ActiveRecord: 3.2ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (152.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trivial_development"[0m
+  [1m[35m (147.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trivial_test"[0m
+  [1m[35m (6.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2682848128924506375)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20180119214601)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.6ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "name" character varying, "score" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119214601"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateQuestions (20180119215238)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.8ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "content" text, "answer" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119215238"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateResponses (20180119215412)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mCREATE TABLE "responses" ("id" bigserial primary key, "game_id" integer, "question_id" integer, "is_correct" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119215412"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryToQuestions (20180123183319)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "questions" ADD "category" character varying[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180123183319"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-23 22:02:39.977743"], ["updated_at", "2018-01-23 22:02:39.977743"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2682848128924506375)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-2text-center\"><divclass=\"question\"><h2>Question:</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">PlaceHolder</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primary\">Placeholder2</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primary\">Placeholder3</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primary\">Placeholder4</button></div></div></div>"], ["created_at", "2018-01-23 22:03:03.443322"], ["updated_at", "2018-01-23 22:03:03.443322"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"questiontext-center\"><h2>Grandmaislost,findher</h2></div><div><divclass=\"square-largeanswerposition1is-incorrect\"><divclass=\"text-centertext\">notthisone</div></div><divclass=\"square-grammyposition2hiddenis-correct\"><imgsrc=\"http://www.deliciousmusings.com/wp-content/uploads/2012/02/180847741256075452_q1JydjkV_f1.jpg\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"square-guyhiddenposition3is-incorrect\"><imgsrc=\"https://img.youtube.com/vi/gn1-lBpD_6c/0.jpg\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"circlehiddenposition4is-incorrect\"><imgsrc=\"https://media-elerium.cursecdn.com/avatars/83/256/636187384434867364.png\"alt=\"Smileyface\"height=\"75\"width=\"\"></div><divclass=\"circle-largeanswerposition5\"><divclass=\"text-centertext\">keeplooking!</div></div><divclass=\"square-largehiddenposition6is-incorrect\"><imgsrc=\"https://pbs.twimg.com/profile_images/679965501271990272/jl6_A6ZX.jpg\"alt=\"Smileyface\"height=\"200\"width=\"\"></div></div>"], ["created_at", "2018-01-23 22:03:03.446571"], ["updated_at", "2018-01-23 22:03:03.446571"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divid=\"maze\"><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary1\">DONTTOUCHTHERED!</div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary2\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary3\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary4\"></div><divclass=\"boundaryfail-areais-incorrect-hover\"id=\"boundary5\"></div><divid=\"start\"class=\"start-maze-hover\">S</div><divid=\"end\"class=\"end-maze-hover\">E</div></div>"], ["created_at", "2018-01-23 22:03:03.448778"], ["updated_at", "2018-01-23 22:03:03.448778"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-2text-center\"><divclass=\"question\"><h2>Question:Findtheprimarynumber</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">25818578</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">159</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-correct\">2</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-incorrect\">16</button></div></div></div>"], ["created_at", "2018-01-23 22:03:03.450922"], ["updated_at", "2018-01-23 22:03:03.450922"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-3text-center\"><divclass=\"question\"><h2>Question:WhatisthecapitolofKansas</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-incorrect\">Boise</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">KansasCity</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-incorrect\">Lawrence</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-correct\">Topeka</button></div></div></div>"], ["created_at", "2018-01-23 22:03:03.453380"], ["updated_at", "2018-01-23 22:03:03.453380"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<divclass=\"question-3text-center\"><divclass=\"question\"><h2>Question:WhatwasthelaststatetojointheUnion</h2></div><divclass=\"container\"><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-one\"class=\"btn-primaryis-correct\">Hawaii</button><buttontype=\"button\"name=\"answer-two\"class=\"btn-primaryis-incorrect\">Alaska</button></div><divclass=\"row-center\"><buttontype=\"button\"name=\"answer-three\"class=\"btn-primaryis-incorrect\">PuertoRico</button><buttontype=\"button\"name=\"answer-four\"class=\"btn-primaryis-incorrect\">Candyland</button></div></div></div>"], ["created_at", "2018-01-23 22:03:03.455480"], ["updated_at", "2018-01-23 22:03:03.455480"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (1.5ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" LIMIT $1[0m  [["LIMIT", 11]]
+Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-23 17:41:03 -0500
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 17:41:03 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"name"=>"Fuck you", "game"=>{"name"=>"Fuck you"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.5ms)[0m  [1m[32mINSERT INTO "games" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fuck you"], ["created_at", "2018-01-23 22:41:03.965520"], ["updated_at", "2018-01-23 22:41:03.965520"]]
+Processing by Api::V1::QuestionsController#index as JSON
+  [1m[35m (4.2ms)[0m  [1m[35mCOMMIT[0m
+  Parameters: {"question"=>{}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Game (1.07ms)
+Completed 200 OK in 30ms (Views: 9.8ms | ActiveRecord: 15.2ms)
+
+
+  [1m[36mQuestion Load (3.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+No serializer found for resource: #<Question id: 1, content: "<divclass=\"question-2text-center\"><divclass=\"quest...", answer: nil, created_at: "2018-01-23 22:03:03", updated_at: "2018-01-23 22:03:03", category: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Question::ActiveRecord_Relation (1.64ms)
+Completed 200 OK in 33ms (Views: 23.3ms | ActiveRecord: 19.6ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 17:41:09 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>1, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>1, "is_correct"=>true}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.5ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 1], ["is_correct", "t"], ["created_at", "2018-01-23 22:41:09.734624"], ["updated_at", "2018-01-23 22:41:09.734624"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 36ms (ActiveRecord: 22.1ms)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (148.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trivial_development"[0m
+  [1m[35m (146.5ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trivial_test"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2682848128924506375)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateGames (20180119214601)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "games" ("id" bigserial primary key, "name" character varying, "score" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119214601"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateQuestions (20180119215238)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "content" text, "answer" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119215238"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateResponses (20180119215412)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.3ms)[0m  [1m[35mCREATE TABLE "responses" ("id" bigserial primary key, "game_id" integer, "question_id" integer, "is_correct" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180119215412"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddCategoryToQuestions (20180123183319)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "questions" ADD "category" character varying[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180123183319"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (3.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-01-23 22:41:51.320190"], ["updated_at", "2018-01-23 22:41:51.320190"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2682848128924506375)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<div class=\"question-2 text-center\"> <div class=\"question\"> <h2>Question 1: How many ounces in a pound</h2> </div><div class=\"container\"> <div class=\"row-center\"> <button type=\"button\" name=\"answer-one\" class=\"btn-primary is-incorrect\">2</button> <button type=\"button\" name=\"answer-two\" class=\"btn-primary is-incorrect\">12</button> </div><div class=\"row-center\"> <button type=\"button\" name=\"answer-three\" class=\"btn-primary is-correct\">16</button> <button type=\"button\" name=\"answer-four\" class=\"btn-primary is-incorrect\">28</button> </div></div></div>"], ["created_at", "2018-01-23 22:41:56.439832"], ["updated_at", "2018-01-23 22:41:56.439832"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<div class=\"question text-center\"> <h2>Grandma is lost, find her</h2></div><div> <div class=\"square-large answer position1 is-incorrect\"> <div class=\"text-center text\">not this one</div></div><div class=\"square-grammy position2 hidden is-correct\"> <img src=\"http://www.deliciousmusings.com/wp-content/uploads/2012/02/180847741256075452_q1JydjkV_f1.jpg\" alt=\"Smiley face\" height=\"75\" width=\"\"> </div><div class=\"square-guy hidden position3 is-incorrect\"> <img src=\"https://img.youtube.com/vi/gn1-lBpD_6c/0.jpg\" alt=\"Smiley face\" height=\"75\" width=\"\"> </div><div class=\"circle hidden position4 is-incorrect\"> <img src=\"https://media-elerium.cursecdn.com/avatars/83/256/636187384434867364.png\" alt=\"Smiley face\" height=\"75\" width=\"\"> </div><div class=\"circle-large answer position5\"> <div class=\"text-center text\">keep looking!</div></div><div class=\"square-large hidden position6 is-incorrect\"> <img src=\"https://pbs.twimg.com/profile_images/679965501271990272/jl6_A6ZX.jpg\" alt=\"Smiley face\" height=\"200\" width=\"\"> </div></div>"], ["created_at", "2018-01-23 22:41:56.444661"], ["updated_at", "2018-01-23 22:41:56.444661"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<div id=\"maze\"> <div class=\"boundary fail-area is-incorrect-hover\" id=\"boundary1\">DONT TOUCH THE RED!</div><div class=\"boundary fail-area is-incorrect-hover\" id=\"boundary2\"></div><div class=\"boundary fail-area is-incorrect-hover\" id=\"boundary3\"></div><div class=\"boundary fail-area is-incorrect-hover\" id=\"boundary4\"></div><div class=\"boundary fail-area is-incorrect-hover\" id=\"boundary5\"></div><div id=\"start\" class=\"start-maze-hover\">S</div><div id=\"end\" class=\"end-maze-hover\">E</div></div>"], ["created_at", "2018-01-23 22:41:56.447047"], ["updated_at", "2018-01-23 22:41:56.447047"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<div class=\"question-2 text-center\"> <div class=\"question\"> <h2>Question: Find the primary number</h2> </div><div class=\"container\"> <div class=\"row-center\"> <button type=\"button\" name=\"answer-one\" class=\"btn-primary is-incorrect\">25818578</button> <button type=\"button\" name=\"answer-two\" class=\"btn-primary is-incorrect\">159</button> </div><div class=\"row-center\"> <button type=\"button\" name=\"answer-three\" class=\"btn-primary is-correct\">2</button> <button type=\"button\" name=\"answer-four\" class=\"btn-primary is-incorrect\">16</button> </div></div></div>"], ["created_at", "2018-01-23 22:41:56.449637"], ["updated_at", "2018-01-23 22:41:56.449637"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<div class=\"question-3 text-center\"> <div class=\"question\"> <h2>Question: What is the capitol of Kansas</h2> </div><div class=\"container\"> <div class=\"row-center\"> <button type=\"button\" name=\"answer-one\" class=\"btn-primary is-incorrect\">Boise</button> <button type=\"button\" name=\"answer-two\" class=\"btn-primary is-incorrect\">Kansas City</button> </div><div class=\"row-center\"> <button type=\"button\" name=\"answer-three\" class=\"btn-primary is-incorrect\">Lawrence</button> <button type=\"button\" name=\"answer-four\" class=\"btn-primary is-correct\">Topeka</button> </div></div></div>"], ["created_at", "2018-01-23 22:41:56.451908"], ["updated_at", "2018-01-23 22:41:56.451908"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "questions" ("content", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["content", "<div class=\"question-3 text-center\"> <div class=\"question\"> <h2>Question: What was the last state to join the Union</h2> </div><div class=\"container\"> <div class=\"row-center\"> <button type=\"button\" name=\"answer-one\" class=\"btn-primary is-correct\">Hawaii</button> <button type=\"button\" name=\"answer-two\" class=\"btn-primary is-incorrect\">Alaska </button> </div><div class=\"row-center\"> <button type=\"button\" name=\"answer-three\" class=\"btn-primary is-incorrect\">Puerto Rico</button> <button type=\"button\" name=\"answer-four\" class=\"btn-primary is-incorrect\">Candyland</button> </div></div></div>"], ["created_at", "2018-01-23 22:41:56.454001"], ["updated_at", "2018-01-23 22:41:56.454001"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/games" for 127.0.0.1 at 2018-01-23 17:42:09 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/questions" for 127.0.0.1 at 2018-01-23 17:42:09 -0500
+Processing by Api::V1::GamesController#create as JSON
+  Parameters: {"name"=>"Hello", "game"=>{"name"=>"Hello"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.7ms)[0m  [1m[32mINSERT INTO "games" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Hello"], ["created_at", "2018-01-23 22:42:09.389108"], ["updated_at", "2018-01-23 22:42:09.389108"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Game (0.49ms)
+Completed 200 OK in 28ms (Views: 12.1ms | ActiveRecord: 13.9ms)
+
+
+Processing by Api::V1::QuestionsController#index as JSON
+  Parameters: {"question"=>{}}
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+No serializer found for resource: #<Question id: 1, content: "<div class=\"question-2 text-center\"> <div class=\"q...", answer: nil, created_at: "2018-01-23 22:41:56", updated_at: "2018-01-23 22:41:56", category: nil>
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with Question::ActiveRecord_Relation (2.07ms)
+Completed 200 OK in 37ms (Views: 28.4ms | ActiveRecord: 37.6ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 17:42:29 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>1, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>1, "is_correct"=>true}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.7ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.3ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (7.4ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 1], ["is_correct", "t"], ["created_at", "2018-01-23 22:42:29.053105"], ["updated_at", "2018-01-23 22:42:29.053105"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 40ms (ActiveRecord: 14.4ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 17:42:46 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>2, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>2, "is_correct"=>true}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 2], ["is_correct", "t"], ["created_at", "2018-01-23 22:42:46.759154"], ["updated_at", "2018-01-23 22:42:46.759154"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 9ms (ActiveRecord: 1.9ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 17:43:04 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>3, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>3, "is_correct"=>true}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 3], ["is_correct", "t"], ["created_at", "2018-01-23 22:43:04.704201"], ["updated_at", "2018-01-23 22:43:04.704201"]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 10ms (ActiveRecord: 3.4ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 17:43:25 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>4, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>4, "is_correct"=>true}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.6ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 4], ["is_correct", "t"], ["created_at", "2018-01-23 22:43:25.119825"], ["updated_at", "2018-01-23 22:43:25.119825"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 10ms (ActiveRecord: 2.3ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 17:43:33 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>5, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>5, "is_correct"=>true}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.4ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 5], ["is_correct", "t"], ["created_at", "2018-01-23 22:43:33.215676"], ["updated_at", "2018-01-23 22:43:33.215676"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 9ms (ActiveRecord: 3.0ms)
+
+
+Started POST "/api/v1/responses" for 127.0.0.1 at 2018-01-23 17:43:39 -0500
+Processing by Api::V1::ResponsesController#create as JSON
+  Parameters: {"game_id"=>1, "question_id"=>6, "is_correct"=>true, "response"=>{"game_id"=>1, "question_id"=>6, "is_correct"=>true}}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGame Load (0.3ms)[0m  [1m[34mSELECT  "games".* FROM "games" WHERE "games"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT  "questions".* FROM "questions" WHERE "questions"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "responses" ("game_id", "question_id", "is_correct", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["game_id", 1], ["question_id", 6], ["is_correct", "t"], ["created_at", "2018-01-23 22:43:39.468773"], ["updated_at", "2018-01-23 22:43:39.468773"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 204 No Content in 8ms (ActiveRecord: 3.0ms)
+
+
