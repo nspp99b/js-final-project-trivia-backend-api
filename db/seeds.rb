@@ -27,7 +27,7 @@
 
 
 Question.create(
-  content: '<div class="question text-center"> <div class="question"> <h2>What was the last state to join the Union</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-correct">Hawaii</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">Alaska </button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-incorrect">Puerto Rico</button> <button type="button" name="answer-four" class="btn-primary is-incorrect">Candyland</button> </div></div></div>',
+  content: '<div class="question text-center"> <div class="question"> <h2>What was the last state to join the Union</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="is-correct">Hawaii</button> <button type="button" name="answer-two" class="is-incorrect">Alaska </button> </div><div class="row-center"> <button type="button" name="answer-three" class="is-incorrect">Puerto Rico</button> <button type="button" name="answer-four" class="is-incorrect">Candyland</button> </div></div></div>',
   answer: nil)
 
 Question.create(
