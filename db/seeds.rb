@@ -52,7 +52,7 @@ Question.create(
   answer: nil)
 
 Question.create(
-  content: '<div class="text-center"><div class="question"><h2>Would You Rather</h2></div><div class="container"><div class="row-center"> <button type="button" name="answer-one" class="is-correct">be alive in the past</button> <button type="button" name="answer-two" class="is-incorrect">be alive in the future</button></div></div></div>',
+  content: '<div class="text-center"><div class="question"><h2>Would You Rather</h2></div><div class="container"><div class="row-center"> <button type="button" name="answer-one" class="is-correct">be alive in the distant past</button> <button type="button" name="answer-two" class="is-incorrect">be alive in the distant future</button></div></div></div>',
   answer: nil
 )
 
