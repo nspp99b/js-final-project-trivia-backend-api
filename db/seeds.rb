@@ -27,7 +27,7 @@
 
 
 Question.create(
-  content: '<div class="question text-center"> <div class="question"> <h2>What was the last state to join the Union</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-correct">Hawaii</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">Alaska </button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-incorrect">Puerto Rico</button> <button type="button" name="answer-four" class="btn-primary is-incorrect">Candyland</button> </div></div></div>',
+  content: '<div class="question text-center"> <div class="question"> <h2>Which was the last state to join the Union</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="is-correct">Hawaii</button> <button type="button" name="answer-two" class="is-incorrect">Alaska </button> </div><div class="row-center"> <button type="button" name="answer-three" class="is-incorrect">Puerto Rico</button> <button type="button" name="answer-four" class="is-incorrect">Candyland</button> </div></div></div>',
   answer: nil)
 
 Question.create(
@@ -36,15 +36,15 @@ Question.create(
 )
 
 Question.create(
-  content: '<div class="question-2 text-center"> <div class="question"> <h2>Find the prime number</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-incorrect">25818578</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">159</button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-correct">2</button> <button type="button" name="answer-four" class="btn-primary is-incorrect">16</button> </div></div></div>',
+  content: '<div class="question-2 text-center"> <div class="question"> <h2>Find the prime number</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="is-incorrect">25818578</button> <button type="button" name="answer-two" class="is-incorrect">159</button> </div><div class="row-center"> <button type="button" name="answer-three" class="is-correct">2</button> <button type="button" name="answer-four" class="is-incorrect">16</button> </div></div></div>',
   answer: nil)
 
 Question.create(
-  content: '<div class="text-center"> <h2>Grandma is lost, find her</h2></div><div> <div class="square-large answer g-position1 is-incorrect"> <div class="text-center text">not this one</div></div><div class="square-grammy g-position2 hidden is-correct"> <img src="http://www.deliciousmusings.com/wp-content/uploads/2012/02/180847741256075452_q1JydjkV_f1.jpg" alt="Smiley face" height="75" width=""> </div><div class="square-guy hidden g-position3 is-incorrect"> <img src="https://img.youtube.com/vi/gn1-lBpD_6c/0.jpg" alt="Smiley face" height="75" width=""> </div><div class="circle hidden g-position4 is-incorrect"> <img src="https://media-elerium.cursecdn.com/avatars/83/256/636187384434867364.png" alt="Smiley face" height="75" width=""> </div><div class="circle-large answer g-position5"> <div class="text-center text">keep looking!</div></div><div class="square-large hidden g-position6 is-incorrect"> <img src="https://pbs.twimg.com/profile_images/679965501271990272/jl6_A6ZX.jpg" alt="Smiley face" height="200" width=""> </div></div>',
+  content: '<div class="text-center"> <h2>Grandma is lost! Find her:</h2></div><div> <div class="square-large hidden g-position1 is-incorrect"> <img src="https://www.tribute.ca/news/wp-content/uploads/2017/06/scooby_doo-650x367.jpg" alt="scooby" height="200" width=""></div><div class="square-grammy g-position2 hidden is-correct"> <img src="http://www.deliciousmusings.com/wp-content/uploads/2012/02/180847741256075452_q1JydjkV_f1.jpg" alt="Smiley face" height="75" width=""> </div><div class="square-guy hidden g-position3 is-incorrect"> <img src="https://img.youtube.com/vi/gn1-lBpD_6c/0.jpg" alt="Smiley face" height="75" width=""> </div><div class="circle hidden g-position4 is-incorrect"> <img src="https://media-elerium.cursecdn.com/avatars/83/256/636187384434867364.png" alt="Smiley face" height="75" width=""> </div><div class="circle-large hidden g-position5"> <img src="https://fa707ec5abab9620c91c-e087a9513984a31bae18dd7ef8b1f502.ssl.cf1.rackcdn.com/16876865_pals-fear-frail-bob-barker-hasnt-much_b59b8b81_m.jpg?bg=A57B48" height="300" width=""></div><div class="square-large hidden g-position6 is-incorrect"> <img src="https://pbs.twimg.com/profile_images/679965501271990272/jl6_A6ZX.jpg" alt="Smiley face" height="200" width=""> </div></div>',
   answer: nil)
 
 Question.create(
-  content: '<div class="question-3 text-center"> <div class="question"> <h2>What is the capital of Kansas</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-incorrect">Boise</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">Kansas City</button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-incorrect">Lawrence</button> <button type="button" name="answer-four" class="btn-primary is-correct">Topeka</button> </div></div></div>',
+  content: '<div class="question-3 text-center"> <div class="question"> <h2>What is the capital of Kansas</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="is-incorrect">Boise</button> <button type="button" name="answer-two" class="is-incorrect">Kansas City</button> </div><div class="row-center"> <button type="button" name="answer-three" class="is-incorrect">Lawrence</button> <button type="button" name="answer-four" class="is-correct">Topeka</button> </div></div></div>',
   answer: nil)
 
 Question.create(
@@ -52,7 +52,7 @@ Question.create(
   answer: nil)
 
 Question.create(
-  content: '<div class="text-center"><div class="question"><h2>Would You Rather</h2></div><div class="container"><div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-correct">be alive in the past</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">be alive in the future</button></div></div></div>',
+  content: '<div class="text-center"><div class="question"><h2>Would You Rather</h2></div><div class="container"><div class="row-center"> <button type="button" name="answer-one" class="is-correct">be alive in the past</button> <button type="button" name="answer-two" class="is-incorrect">be alive in the future</button></div></div></div>',
   answer: nil
 )
 
@@ -62,7 +62,7 @@ Question.create(
 )
 
 Question.create(
-  content: '<div class="question text-center"> <div class="question"> <h2>How many ounces in a pound</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="btn-primary is-incorrect">2</button> <button type="button" name="answer-two" class="btn-primary is-incorrect">12</button> </div><div class="row-center"> <button type="button" name="answer-three" class="btn-primary is-correct">16</button> <button type="button" name="answer-four" class="btn-primary is-incorrect">28</button> </div></div></div>',
+  content: '<div class="question text-center"> <div class="question"> <h2>How many ounces in a pound</h2> </div><div class="container"> <div class="row-center"> <button type="button" name="answer-one" class="is-incorrect">2</button> <button type="button" name="answer-two" class="is-incorrect">12</button> </div><div class="row-center"> <button type="button" name="answer-three" class="is-correct">16</button> <button type="button" name="answer-four" class="is-incorrect">28</button> </div></div></div>',
   answer: nil)
 
 Question.create(
