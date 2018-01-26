@@ -1,5 +1,10 @@
 class Api::V1::GamesController < ApplicationController
 
+  def index
+    @games = Game.get_high_scores
+    render json: @games
+  end
+
   def create
     @game = Game.create(game_params)
     render json: @game
