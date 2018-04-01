@@ -20,7 +20,7 @@ The user can play again after completing the game.
 1. Clone down to your computer. 
 2. CD into project folder on your computer from your terminal.
 3. Enter rails s
-4. Ensure that you have the front end up and running: https://github.com/nspp99b/js-final-project-trivia-fronte
+4. Ensure that you have the front end up and running: https://github.com/nspp99b/js-final-project-trivia-frontend
 
 ## Contributing 
 1. Fork it!
